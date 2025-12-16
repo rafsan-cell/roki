@@ -1,0 +1,128 @@
+/* পুরো ওয়েবপেজের স্টাইল ঠিক করা */
+body {
+    background-color: #ffebf0; /* পিংক ব্যাকগ্রাউন্ড */
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* পাশে স্ক্রল রিমুভ */
+}
+
+/* কন্টেইনার */
+.container {
+    min-height: 150vh;
+    padding-bottom: 50px;
+}
+
+/* Our Memory Lane টাইটেল */
+h1 {
+    font-size: 2.5em;
+    color: #ff0080;
+    font-weight: bold;
+}
+
+/* "A journey..." টেক্সট বক্স */
+.journey-box {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 1.2em;
+    font-weight: bold;
+    animation: float 3s infinite alternate ease-in-out;
+}
+
+/* বক্সের অ্যানিমেশন */
+@keyframes float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+/* ইমেজ গ্যালারি */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* ছবি স্টাইল */
+.gallery div {
+    position: relative;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease-in-out;
+}
+
+/* ছবি হোভার অ্যানিমেশন */
+.gallery div:hover {
+    transform: scale(1.1);
+}
+
+/* ছবি */
+.gallery img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* ক্যাপশন স্টাইল */
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 8px;
+    border-radius: 0 0 15px 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.gallery div:hover .caption {
+    opacity: 1;
+}
+
+/* লাইট জ্বালানোর এনিমেশন */
+.light {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+    animation: light-glow 1.5s infinite alternate;
+}
+
+@keyframes light-glow {
+    0% { box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8); }
+    100% { box-shadow: 0px 0px 30px rgba(255, 255, 255, 1); }
+}
+
+/* কেক এবং উইশ মেসেজের স্টাইল */
+.cake img, .wish-message p {
+    display: block;
+    margin: 20px auto;
+}
+
+/* বাটনের স্টাইল */
+button {
+    background-color: #ff0080;
+    color: white;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e60073;
+}
